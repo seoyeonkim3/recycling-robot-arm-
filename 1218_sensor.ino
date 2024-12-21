@@ -23,7 +23,7 @@ void loop() {
   Serial.println(distance);
 
   // Read data from proximitSSy sensor
-  int proximity = digitalRead(signal);  // Invert proximity sensor value (0 or 1)
+  int proximity = !digitalRead(signal);  // Invert proximity sensor value (0 or 1)
   Serial.print("P:"); // Add a tag for proximity data
   Serial.println(proximity);
 
